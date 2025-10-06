@@ -5,14 +5,14 @@ import java.util.Date;
 public class Message {
     private Utilisateur auteur;
     private String texte;
-    private Date dateCreation;
+    private Date date_creation;
     private boolean confidentiel;
 
     public Message(String texte, Utilisateur auteur, boolean confidentiel) {
         this.texte = texte;
         this.auteur = auteur;
         this.confidentiel = confidentiel;
-        this.dateCreation = new Date();
+        this.date_creation = new Date();
     }
 
     public Utilisateur getAuteur() {
@@ -24,7 +24,7 @@ public class Message {
     }
 
     public Date getDateCreation() {
-        return dateCreation;
+        return date_creation;
     }
 
     public boolean isConfidentiel() {

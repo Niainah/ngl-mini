@@ -6,13 +6,13 @@ import java.util.Set;
 
 public class Publication {
     private int id;
-    private Utilisateur lienUtilisateur;
-    private List<Message> messagesAssocies;
+    private Utilisateur lien_utilisateur;
+    private List<Message> messages_associes;
 
     public Publication(int id, Utilisateur lienUtilisateur, List<Message> messagesAssocies) {
         this.id = id;
-        this.lienUtilisateur = lienUtilisateur;
-        this.messagesAssocies = messagesAssocies;
+        this.lien_utilisateur = lienUtilisateur;
+        this.messages_associes = messagesAssocies;
     }
 
     public int getId() {
@@ -20,16 +20,16 @@ public class Publication {
     }
 
     public Utilisateur getLienUtilisateur() {
-        return lienUtilisateur;
+        return lien_utilisateur;
     }
 
     public List<Message> getMessagesAssocies() {
-        return messagesAssocies;
+        return messages_associes;
     }
 
     public void afficherAuteurs() {
         Set<String> dejaAffiches = new HashSet<>();
-        for (Message msg : messagesAssocies) {
+        for (Message msg : messages_associes) {
             if (msg.getAuteur() != null) {
                 String info = msg.getAuteur().afficherInfo();
                 if (!dejaAffiches.contains(info)) {
